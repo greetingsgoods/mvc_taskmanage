@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Задачник</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/font.css">
+    <link rel="stylesheet" type="text/css" href="/css/list.css"/>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+{% include 'navbar.html.twig' %}
+<div class="container">
+    {% if messages %}
+        <div class="message">
+            {% for message in messages %}
+                <p><strong>{{ message|e }}</strong></p>
+            {% endfor %}
+        </div>
+    {% endif %}
+    {% include 'search.html.twig' %}
+    {% include 'table.html.twig' %}
+</div>
+</body>
