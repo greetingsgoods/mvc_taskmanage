@@ -1,3 +1,5 @@
+# on 20.06.2021 is hosted http://rupro.tw1.ru,  be planned run onto HelioHost 
+
 1. composer install
 
 2. which mysql && mysql --user="root" --password="password" --host="localhost" "NAME_OF_BASE" < "install.sql"
@@ -6,7 +8,7 @@
 
        <VirtualHost *:80>
            DocumentRoot "/full_path/mvc_taskmanage/public"
-           ServerName testp
+           ServerName mvc_taskmanage
 
          <Directory /full_path/mvc_taskmanage/public>
            RewriteEngine On
