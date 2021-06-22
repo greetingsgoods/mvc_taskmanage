@@ -32,11 +32,11 @@ class NewTaskValidator
 	 */
 	public function checkInput($input, &$errors)
 	{
-		$result = true;
+		
 		$email = $this->checkEmail($input);
 		$taskText = $this->checkTaskText($input);
-		//$image = $this->checkImage($_FILES);
-		$image = 'somepic.jpg';
+		$result['email'] = $input['email'];
+		$result['task_text'] = $input['task_text'];
 		if ($email === false) {
 			$errors[] = 'Введен неправильный адрес почты. Исправьте!';
 			$result = false;
